@@ -7,4 +7,6 @@ public abstract class Item
     public Quality Quality { get; set; }
 
     public abstract void UpdateQuality();
+
+    public override string ToString() => $"{Name}, {SellIn}, {Quality.ToString()}";
 }
