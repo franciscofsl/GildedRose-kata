@@ -8,7 +8,7 @@ public class ConjuredItemTest
     [Fact]
     public void Should_Decrease_Quality_If_Greater_Than_0()
     {
-        var item = new ConjuredItem { Name = "Elixir of the Mongoose", SellIn = 5, Quality = 7 };
+        var item = new ConjuredItem { Name = "Elixir of the Mongoose", SellIn = 5, Quality = Quality.Of(7) };
 
         item.UpdateQuality();
 
@@ -18,7 +18,7 @@ public class ConjuredItemTest
     [Fact]
     public void Should_Decrease_SellIn()
     {
-        var item = new ConjuredItem { Name = "Elixir of the Mongoose", SellIn = 5, Quality = 7 };
+        var item = new ConjuredItem { Name = "Elixir of the Mongoose", SellIn = 5, Quality = Quality.Of(7) };
 
         item.UpdateQuality();
 
@@ -28,7 +28,7 @@ public class ConjuredItemTest
     [Fact]
     public void Should_Decrease_Quality_When_SellIn_Lower_Than_0_And_Quality_Greater_Than_0()
     {
-        var item = new ConjuredItem { Name = "+5 Dexterity Vest", SellIn = -1, Quality = 20 };
+        var item = new ConjuredItem { Name = "+5 Dexterity Vest", SellIn = -1, Quality = Quality.Of(20) };
 
         item.UpdateQuality();
 
