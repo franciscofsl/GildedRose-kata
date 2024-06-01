@@ -10,32 +10,33 @@ public class Program
     {
         Console.WriteLine("OMGHAI!");
 
-        IList<Item> Items = new List<Item>{
-            new ConjuredItem {Name = "+5 Dexterity Vest", SellIn = 10, Quality = 20},
-            new BrieItem {Name = "Aged Brie", SellIn = 2, Quality = 0},
-            new ConjuredItem {Name = "Elixir of the Mongoose", SellIn = 5, Quality = 7},
-            new SulfurasItem {Name = "Sulfuras, Hand of Ragnaros", SellIn = 0, Quality = 80},
-            new SulfurasItem {Name = "Sulfuras, Hand of Ragnaros", SellIn = -1, Quality = 80},
+        IList<Item> Items = new List<Item>
+        {
+            new ConjuredItem { Name = "+5 Dexterity Vest", SellIn = 10, Quality = Quality.Of(20) },
+            new BrieItem { Name = "Aged Brie", SellIn = 2, Quality = Quality.Default },
+            new ConjuredItem { Name = "Elixir of the Mongoose", SellIn = 5, Quality = Quality.Of(7) },
+            new SulfurasItem { Name = "Sulfuras, Hand of Ragnaros", SellIn = 0, Quality = Quality.Of(80) },
+            new SulfurasItem { Name = "Sulfuras, Hand of Ragnaros", SellIn = -1, Quality = Quality.Of(80) },
             new BackstageItem
             {
                 Name = "Backstage passes to a TAFKAL80ETC concert",
                 SellIn = 15,
-                Quality = 20
+                Quality = Quality.Of(20)
             },
             new BackstageItem
             {
                 Name = "Backstage passes to a TAFKAL80ETC concert",
                 SellIn = 10,
-                Quality = 49
+                Quality = Quality.Of(49)
             },
             new BackstageItem
             {
                 Name = "Backstage passes to a TAFKAL80ETC concert",
                 SellIn = 5,
-                Quality = 49
+                Quality = Quality.Of(49)
             },
             // this conjured item does not work properly yet
-            new ConjuredItem {Name = "Conjured Mana Cake", SellIn = 3, Quality = 6}
+            new ConjuredItem { Name = "Conjured Mana Cake", SellIn = 3, Quality = Quality.Of(6) }
         };
 
         var app = new GildedRose(Items);
@@ -49,6 +50,7 @@ public class Program
             {
                 Console.WriteLine(Items[j].Name + ", " + Items[j].SellIn + ", " + Items[j].Quality);
             }
+
             Console.WriteLine("");
             app.UpdateQuality();
         }
