@@ -4,67 +4,32 @@ public sealed class BackstageItem : Item
 {
     public override void UpdateQuality()
     {
-        if (Name != "Backstage passes to a TAFKAL80ETC concert")
+        if (Quality < 50)
         {
-            if (Quality > 0)
+            Quality = Quality + 1;
+
+            if (SellIn < 11)
             {
-                if (Name != "Sulfuras, Hand of Ragnaros")
+                if (Quality < 50)
                 {
-                    Quality = Quality - 1;
+                    Quality = Quality + 1;
                 }
             }
-        }
-        else
-        {
-            if (Quality < 50)
+
+            if (SellIn < 6)
             {
-                Quality = Quality + 1;
-
-                if (Name == "Backstage passes to a TAFKAL80ETC concert")
+                if (Quality < 50)
                 {
-                    if (SellIn < 11)
-                    {
-                        if (Quality < 50)
-                        {
-                            Quality = Quality + 1;
-                        }
-                    }
-
-                    if (SellIn < 6)
-                    {
-                        if (Quality < 50)
-                        {
-                            Quality = Quality + 1;
-                        }
-                    }
+                    Quality = Quality + 1;
                 }
             }
         }
 
-        if (Name != "Sulfuras, Hand of Ragnaros")
-        {
-            SellIn = SellIn - 1;
-        }
+        SellIn = SellIn - 1;
 
         if (SellIn < 0)
         {
-            if (Name != "Aged Brie")
-            {
-                if (Name != "Backstage passes to a TAFKAL80ETC concert")
-                {
-                    if (Quality > 0)
-                    {
-                        if (Name != "Sulfuras, Hand of Ragnaros")
-                        {
-                            Quality = Quality - 1;
-                        }
-                    }
-                }
-                else
-                {
-                    Quality = Quality - Quality;
-                }
-            }
+            Quality = Quality - Quality;
         }
     }
 }
