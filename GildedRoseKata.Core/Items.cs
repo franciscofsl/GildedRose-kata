@@ -32,7 +32,9 @@ public class ItemsCollection : IEnumerable<Item>
 
     public override string ToString()
     {
-        var builder = new StringBuilder("name, sellIn, quality");
+        var builder = new StringBuilder();
+
+        builder.AppendLine("name, sellIn, quality");
 
         foreach (var item in _items)
         {
