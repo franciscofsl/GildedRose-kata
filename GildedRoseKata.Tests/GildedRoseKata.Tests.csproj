@@ -21,4 +21,15 @@
         </PackageReference>
     </ItemGroup>
 
+    <ItemGroup>
+      <None Update="CharacterizationTest.txt">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        <DependentUpon>CharacterizationTest.cs</DependentUpon>
+      </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\GildedRoseKata\GildedRoseKata.csproj" />
+    </ItemGroup>
+
 </Project>
