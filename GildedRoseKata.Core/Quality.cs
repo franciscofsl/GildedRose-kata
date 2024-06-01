@@ -16,6 +16,8 @@ public sealed record Quality
 
     private int Value { get; }
 
+    public override string ToString() => Value.ToString();
+
     internal Quality Increase()
     {
         if (CanBeIncreased())
