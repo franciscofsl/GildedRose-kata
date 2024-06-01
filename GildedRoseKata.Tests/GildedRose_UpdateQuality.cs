@@ -15,7 +15,7 @@ namespace GildedRoseKata.Tests
             int initialQuality = 80;
             var items = new List<Item>
             {
-                new Item { Name = "Sulfuras, Hand of Ragnaros", SellIn = 0, Quality = initialQuality },
+                new SulfurasItem { Name = "Sulfuras, Hand of Ragnaros", SellIn = 0, Quality = initialQuality },
             };
             var gildedRose = new GildedRose(items);
 
