@@ -31,6 +31,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\GildedRoseKata.Core\GildedRoseKata.Core.csproj" />
+      <ProjectReference Include="..\GildedRoseKata\GildedRoseKata.csproj" />
     </ItemGroup>
 
 </Project>
