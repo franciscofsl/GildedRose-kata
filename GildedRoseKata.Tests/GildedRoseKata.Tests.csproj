@@ -23,15 +23,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <None Update="CharacterizationTest.txt">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-        <DependentUpon>CharacterizationTest.cs</DependentUpon>
-      </None>
-    </ItemGroup>
-
-    <ItemGroup>
       <ProjectReference Include="..\GildedRoseKata.Core\GildedRoseKata.Core.csproj" />
-      <ProjectReference Include="..\GildedRoseKata\GildedRoseKata.csproj" />
     </ItemGroup>
 
 </Project>
