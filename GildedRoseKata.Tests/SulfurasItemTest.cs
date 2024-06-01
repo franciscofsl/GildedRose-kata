@@ -12,6 +12,6 @@ public class SulfurasItemTest
 
         item.UpdateQuality();
 
-        item.Quality.Should().Be(11);
+        item.Quality.Should().Be(Quality.Of(11));
     }
 }

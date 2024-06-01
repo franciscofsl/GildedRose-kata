@@ -12,7 +12,7 @@ public class BrieItemTest
 
         brieItem.UpdateQuality();
 
-        brieItem.Quality.Should().Be(1);
+        brieItem.Quality.Should().Be(Quality.Of(1));
     }
 
     [Fact]
@@ -32,6 +32,6 @@ public class BrieItemTest
 
         brieItem.UpdateQuality();
 
-        brieItem.Quality.Should().Be(7);
+        brieItem.Quality.Should().Be(Quality.Of(7));
     }
 }

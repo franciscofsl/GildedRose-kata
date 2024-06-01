@@ -4,16 +4,13 @@ public sealed class BrieItem : Item
 {
     public override void UpdateQuality()
     {
-        if (Quality < 50)
-        {
-            Quality++;
-        }
+        Quality = Quality.Increase();
 
         SellIn--;
 
-        if (SellIn < 0 && Quality < 50)
+        if (SellIn < 0)
         {
-            Quality++;
+            Quality = Quality.Increase();
         }
     }
 }

@@ -4,16 +4,13 @@ public sealed class ConjuredItem : Item
 {
     public override void UpdateQuality()
     {
-        if (Quality > 0)
-        {
-            Quality--;
-        }
+        Quality = Quality.Decrease();
 
         SellIn--;
 
-        if (SellIn < 0 && Quality > 0)
+        if (SellIn < 0)
         {
-            Quality--;
+            Quality = Quality.Decrease();
         }
     }
 }

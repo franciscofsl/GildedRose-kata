@@ -4,18 +4,18 @@ public sealed class BackstageItem : Item
 {
     public override void UpdateQuality()
     {
-        if (Quality < 50)
+        if (Quality.CanBeIncreased())
         {
-            Quality++;
+            Quality = Quality.Increase();
 
-            if (SellIn < 11 && Quality < 50)
+            if (SellIn < 11)
             {
-                Quality++;
+                Quality = Quality.Increase();
             }
 
-            if (SellIn < 6 && Quality < 50)
+            if (SellIn < 6)
             {
-                Quality++;
+                Quality = Quality.Increase();
             }
         }
 
@@ -23,7 +23,7 @@ public sealed class BackstageItem : Item
 
         if (SellIn < 0)
         {
-            Quality = 0;
+            Quality = Quality.Default;
         }
     }
 }

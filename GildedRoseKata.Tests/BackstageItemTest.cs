@@ -12,7 +12,7 @@ public class BackstageItemTest
 
         backstageItem.UpdateQuality();
 
-        backstageItem.Quality.Should().Be(50);
+        backstageItem.Quality.Should().Be(Quality.Of(50));
     }
 
     [Fact]
@@ -22,7 +22,7 @@ public class BackstageItemTest
 
         backstageItem.UpdateQuality();
 
-        backstageItem.Quality.Should().Be(22);
+        backstageItem.Quality.Should().Be(Quality.Of(22));
     }
 
     [Fact]
@@ -32,7 +32,7 @@ public class BackstageItemTest
 
         backstageItem.UpdateQuality();
 
-        backstageItem.Quality.Should().Be(23);
+        backstageItem.Quality.Should().Be(Quality.Of(23));
     }
 
     [Fact]
@@ -52,6 +52,6 @@ public class BackstageItemTest
 
         backstageItem.UpdateQuality();
 
-        backstageItem.Quality.Should().Be(0);
+        backstageItem.Quality.Should().Be(Quality.Of(0));
     }
 }
