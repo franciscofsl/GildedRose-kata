@@ -24,10 +24,7 @@ public class ItemsCollection : IEnumerable<Item>
 
     public void UpdateQuality()
     {
-        foreach (var item in _items)
-        {
-            item.UpdateQuality();
-        }
+        Parallel.ForEach(_items, _ => _.UpdateQuality());
     }
 
     public override string ToString()
