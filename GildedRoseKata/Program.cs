@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using GildedRoseKata.Core;
 
 namespace GildedRoseKata;
@@ -10,7 +9,7 @@ public class Program
     {
         Console.WriteLine("OMGHAI!");
 
-        IList<Item> Items = new List<Item>
+        var items = new ItemsCollection
         {
             new ConjuredItem { Name = "+5 Dexterity Vest", SellIn = 10, Quality = Quality.Of(20) },
             new BrieItem { Name = "Aged Brie", SellIn = 2, Quality = Quality.Default },
@@ -39,20 +38,12 @@ public class Program
             new ConjuredItem { Name = "Conjured Mana Cake", SellIn = 3, Quality = Quality.Of(6) }
         };
 
-        var app = new GildedRose(Items);
-
-
         for (var i = 0; i < 31; i++)
         {
             Console.WriteLine("-------- day " + i + " --------");
-            Console.WriteLine("name, sellIn, quality");
-            for (var j = 0; j < Items.Count; j++)
-            {
-                Console.WriteLine(Items[j].Name + ", " + Items[j].SellIn + ", " + Items[j].Quality);
-            }
-
+            Console.WriteLine(items.ToString());
             Console.WriteLine("");
-            app.UpdateQuality();
+            items.UpdateQuality();
         }
     }
 }
