@@ -1,11 +1,10 @@
-﻿namespace GildedRoseKata.Core
-{
-    public abstract class Item
-    {
-        public string Name { get; set; }
-        public int SellIn { get; set; }
-        public int Quality { get; set; }
+﻿namespace GildedRoseKata.Core;
 
-        public abstract void UpdateQuality();
-    }
+public abstract class Item
+{
+    public string Name { get; set; }
+    public int SellIn { get; set; }
+    public int Quality { get; set; }
+
+    public abstract void UpdateQuality();
 }
