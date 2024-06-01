@@ -5,8 +5,7 @@ namespace GildedRoseKata.Core;
 public class ItemsCollection : IEnumerable<Item>
 {
     private readonly IList<Item> _items = new List<Item>();
-
-
+    
     public IEnumerator<Item> GetEnumerator()
     {
         return _items.GetEnumerator();
@@ -24,10 +23,8 @@ public class ItemsCollection : IEnumerable<Item>
 
     public void UpdateQuality()
     {
-        for (var i = 0; i < _items.Count; i++)
+        foreach (var item in _items)
         {
-            var item = _items[i];
-
             item.UpdateQuality();
         }
     }
