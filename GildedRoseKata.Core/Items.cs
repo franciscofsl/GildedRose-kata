@@ -1,11 +1,12 @@
 ﻿using System.Collections;
+using System.Text;
 
 namespace GildedRoseKata.Core;
 
 public class ItemsCollection : IEnumerable<Item>
 {
     private readonly IList<Item> _items = new List<Item>();
-    
+
     public IEnumerator<Item> GetEnumerator()
     {
         return _items.GetEnumerator();
@@ -27,5 +28,17 @@ public class ItemsCollection : IEnumerable<Item>
         {
             item.UpdateQuality();
         }
+    }
+
+    public override string ToString()
+    {
+        var builder = new StringBuilder("name, sellIn, quality");
+
+        foreach (var item in _items)
+        {
+            builder.AppendLine(item.ToString());
+        }
+
+        return builder.ToString();
     }
 }
