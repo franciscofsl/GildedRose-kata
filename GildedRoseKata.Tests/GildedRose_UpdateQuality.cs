@@ -1,8 +1,4 @@
 ﻿using FluentAssertions;
-using Shouldly;
-using System.Collections.Generic;
-using System.Linq;
-using Xunit;
 
 namespace GildedRoseKata
 {
@@ -34,7 +30,7 @@ namespace GildedRoseKata
             firstItem.Quality.Should().Be(initialQuality);
 
             // shouldly
-            firstItem.Quality.ShouldBe(initialQuality);
+            firstItem.Quality.Should().Be(initialQuality);
         }
     }
 }
