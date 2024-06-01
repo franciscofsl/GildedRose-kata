@@ -6,7 +6,7 @@
         public int SellIn { get; set; }
         public int Quality { get; set; }
 
-        public void UpdateQuality()
+        public virtual void UpdateQuality()
         {
             if (Name != "Aged Brie" && Name != "Backstage passes to a TAFKAL80ETC concert")
             {
