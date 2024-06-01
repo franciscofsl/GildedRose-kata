@@ -16,7 +16,7 @@ public class ItemsCollection : IEnumerable<Item>
         return GetEnumerator();
     }
 
-    public void Add(BrieItem item)
+    public void Add(Item item)
     {
         _items.Add(item);
     }
