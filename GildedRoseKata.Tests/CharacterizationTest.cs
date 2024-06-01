@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using Microsoft.VisualStudio.TestPlatform.TestHost;
 using Xunit;
 
 namespace GildedRoseKata

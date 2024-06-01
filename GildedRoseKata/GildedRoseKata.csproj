@@ -17,4 +17,8 @@
     <None Remove="LICENSE" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\GildedRoseKata.Core\GildedRoseKata.Core.csproj" />
+  </ItemGroup>
+
 </Project>
