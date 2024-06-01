@@ -8,5 +8,5 @@ public abstract class Item
 
     public abstract void UpdateQuality();
 
-    public override string ToString() => $"{Name}, {SellIn}, {Quality.ToString()}";
+    public override string ToString() => $"{Name}, {SellIn}, {Quality}";
 }
