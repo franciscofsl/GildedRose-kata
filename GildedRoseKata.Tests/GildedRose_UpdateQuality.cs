@@ -1,6 +1,7 @@
 ﻿using FluentAssertions;
+using GildedRoseKata.Core;
 
-namespace GildedRoseKata
+namespace GildedRoseKata.Tests
 {
     /// <summary>
     /// Test naming convention recommendation:
