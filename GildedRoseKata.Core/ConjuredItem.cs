@@ -6,14 +6,14 @@ public sealed class ConjuredItem : Item
     {
         if (Quality > 0)
         {
-            Quality = Quality - 1;
+            Quality--;
         }
 
-        SellIn = SellIn - 1;
+        SellIn--;
 
         if (SellIn < 0 && Quality > 0)
         {
-            Quality = Quality - 1;
+            Quality--;
         }
     }
 }
