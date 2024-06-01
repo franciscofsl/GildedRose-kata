@@ -8,7 +8,7 @@
 
         public virtual void UpdateQuality()
         {
-            if (Name != "Aged Brie" && Name != "Backstage passes to a TAFKAL80ETC concert")
+            if (Name != "Backstage passes to a TAFKAL80ETC concert")
             {
                 if (Quality > 0)
                 {
@@ -67,13 +67,6 @@
                     else
                     {
                         Quality = Quality - Quality;
-                    }
-                }
-                else
-                {
-                    if (Quality < 50)
-                    {
-                        Quality = Quality + 1;
                     }
                 }
             }
