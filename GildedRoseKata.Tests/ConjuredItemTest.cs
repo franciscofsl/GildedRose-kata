@@ -12,7 +12,7 @@ public class ConjuredItemTest
 
         item.UpdateQuality();
 
-        item.Quality.Should().Be(Quality.Of(6));
+        item.Quality.Should().Be(Quality.Of(5));
     }
 
     [Fact]
@@ -32,6 +32,6 @@ public class ConjuredItemTest
 
         item.UpdateQuality();
 
-        item.Quality.Should().Be(Quality.Of(18));
+        item.Quality.Should().Be(Quality.Of(16));
     }
 }

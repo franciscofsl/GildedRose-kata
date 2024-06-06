@@ -18,6 +18,11 @@ public sealed record Quality
 
     public override string ToString() => _value.ToString();
 
+    public static implicit operator int(Quality quality)
+    {
+        return quality._value;
+    }
+    
     internal Quality Increase()
     {
         if (CanBeIncreased())
@@ -28,11 +33,11 @@ public sealed record Quality
         return this;
     }
 
-    internal Quality Decrease()
+    internal Quality Decrease(Quality amount)
     {
         if (CanBeDecreased())
         {
-            return new Quality(_value - 1);
+            return new Quality(_value - amount);
         }
 
         return this;
