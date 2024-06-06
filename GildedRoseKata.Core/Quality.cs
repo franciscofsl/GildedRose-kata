@@ -2,11 +2,13 @@
 
 public sealed record Quality
 {
+    private readonly int _value;
+    
     public static Quality Default => new(0);
 
     private Quality(int value)
     {
-        Value = value;
+        _value = value;
     }
 
     public static Quality Of(int value)
@@ -14,15 +16,13 @@ public sealed record Quality
         return new Quality(value);
     }
 
-    private int Value { get; }
-
-    public override string ToString() => Value.ToString();
+    public override string ToString() => _value.ToString();
 
     internal Quality Increase()
     {
         if (CanBeIncreased())
         {
-            return new Quality(Value + 1);
+            return new Quality(_value + 1);
         }
 
         return this;
@@ -32,13 +32,13 @@ public sealed record Quality
     {
         if (CanBeDecreased())
         {
-            return new Quality(Value - 1);
+            return new Quality(_value - 1);
         }
 
         return this;
     }
 
-    internal bool CanBeIncreased() => Value < 50;
+    internal bool CanBeIncreased() => _value < 50;
 
-    private bool CanBeDecreased() => Value > 0;
+    private bool CanBeDecreased() => _value > 0;
 }
