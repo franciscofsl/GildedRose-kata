@@ -32,7 +32,7 @@ public sealed record Quality
     {
         if (CanBeDecreased())
         {
-            return new Quality(Value + -1);
+            return new Quality(Value - 1);
         }
 
         return this;
