@@ -4,7 +4,7 @@ public sealed record Quality
 {
     private readonly int _value;
     
-    public static Quality Default => new(0);
+    public static Quality Min => new(0);
 
     private Quality(int value)
     {

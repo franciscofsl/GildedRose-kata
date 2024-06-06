@@ -23,7 +23,7 @@ public sealed class BackstageItem : Item
 
         if (SellIn < 0)
         {
-            Quality = Quality.Default;
+            Quality = Quality.Min;
         }
     }
 }
